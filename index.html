@@ -1,0 +1,32 @@
+<div id="resp"></div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script>
+$.ajax({
+  method: "GET",
+  url: "http://pokeapi.co/api/v1/pokemon/4/"
+})
+  .done(function( data ) {
+    $("#resp").html(JSON.stringify(data));
+//    alert( JSON.stringify(msg)  );
+})
+  .always(function() {
+//    alert( "completado" );
+});
+
+/*
+$.ajax( {
+    method: "GET",
+    url: "http://pokeapi.co/api/v1/pokemon/4/"
+  })
+  done(function(data) {
+    alert(data);
+    alert( "success" );
+  })
+  .fail(function() {
+    alert( "error" );
+  })
+  .always(function() {
+    alert( "complete" );
+  });
+  */
+</script>
